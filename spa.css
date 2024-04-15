@@ -1,0 +1,236 @@
+body::-webkit-scrollbar{
+    width: 5px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: gold;
+    border-radius:3px;
+    height: 60%;
+}
+body::-webkit-scrollbar-track{
+    background-color: rgba(46, 39, 0, 0.767);
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: gold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+footer{
+    visibility: hidden;
+    background-color: gold;
+    height:20px;
+}
+h1{
+    font-size: 55px;
+}
+h6{
+    color: white;
+}
+.contenedor-imagen {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    width: 200px;
+}
+#MenuServices{
+    display: flex;
+}
+.menuImg{
+    height: 190px;
+    width: 100%;
+    border-radius: 100%;
+    border: 2px gold;
+    border-style:double;
+}
+.tituloImage {
+    cursor: pointer;
+    user-select: none;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    transform: translate(0);
+    background-color: rgba(59, 59, 59, 0.418);
+    color: rgb(252, 219, 31);
+    border:1px solid gold;
+    border-radius: 50px;
+    opacity: 0; /* Inicialmente oculto */
+    position: absolute;
+    height: auto;
+    width: auto;
+    text-align: center;
+    z-index: 1;   
+    transition: opacity 0.3s ease; /* Transición suave de la opacidad */
+}
+.menuImg:hover{
+    border: 2px gold;
+    border-style: groove;
+    scale: 120%;
+}
+.menuImg:hover + .tituloImage{
+    opacity: 1; 
+}
+.tituloImage:hover{
+    opacity: 1;
+}
+#logo{
+    height: 40px;
+}
+.linkImg:hover + .tituloImage{
+    opacity: 1;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+nav{
+    background-color: black;
+    padding-left: 20px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#spaLogo{
+    height: 90px;
+    margin-right: 30px;
+}
+.selector{
+    display: flex;
+    justify-content:space-around;
+}
+select{
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: gb(255, 255, 25);
+    background-color:gold;
+    border-radius: 50px;
+    border: 2px solid gold;
+}
+option{
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 224, 88);
+    border-radius: 50px;
+    border: 2px solid white;
+}
+.centerMen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.elegidoM{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+#header{
+    color: gold;
+    text-align: center;
+    width: 400px;
+}
+#body{
+    color: black;
+    background-color: gold;
+    text-align: justify;
+    width: 400px;
+    padding: 15px;
+    font-weight: 700;
+    border-radius: 25px;
+}
+#precio{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+#valor{
+    background-color: gold;
+    color: black;
+    border-radius: 10px;
+    padding: 5px 3px 5px 3px;
+    margin-left: 2px;
+    font-weight: bold;
+}
+.imgH{
+    height: 16px;
+}
+#contenedorHeader{
+    display:flex;
+    justify-content: center;
+
+}
+#botonReserva{
+    background-color: gold;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    border: 2px solid gold;
+    border-radius: 15px;
+}
+#botonReserva:hover{
+    border: 2px solid white;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width:320px) {
+    .tituloImage{
+        opacity: 1;
+    }
+    #MenuServices{
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+    }
+    #HyB{
+        width: 300px;
+    }
+    #body{
+        width: 260px;
+    }
+    #menuImg{
+        height: 60px;
+        
+    }
+    #contenedor-imagen{
+        height: 70px;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+    }
+    #contenedorHeader{
+        width: 300px;
+    }
+    body{
+        font-size: 14px;
+    }
+}
+@media (min-width:768px) {
+    #MenuServices{
+        width: 750px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media (min-width:1366px) {
+    .tituloImage{
+        opacity: 0;
+    }
+    #MenuServices:hover .tituloImage{
+        opacity: 1;
+    }
+}

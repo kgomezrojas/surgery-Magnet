@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="./spa.css">
+    <link rel="shortcut icon" href="../../assets/Icons/MagnetIcon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- Fin del fragmento de código del botón de Google Translate -->
+    <title>Magnet - Spa</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../services.html">
+                <img src="../../assets/Icons/flecha-izquierda.png" alt="atras">
+            </a>
+            <img id="spaLogo" src="./image/icons/SpaLogo.png" alt="">
+        </nav>
+    </header>
+    <main>
+        <img width="100%" src="./image/PortadaSpa.png" alt="">
+        <div class="centerMen">
+            <h2 id="services">Elige el servicio</h2>
+            <div>
+                <section id="MenuServices">
+                    <a href="#eligeMasaje" ><div  class="contenedor-imagen">
+                        
+                                <img onclick="mostrarSelectM();" class="menuImg" alt="Descripción de la imagen"  id="imagen1" src="./image/Spa/MasajesPort.png" >
+                                <div onclick="mostrarSelectM();"  class="tituloImage" id="titulo1">Masaje</div>
+                                
+                        </div> 
+                    </a>
+                    <a href="#eligeMasaje"><div  class="contenedor-imagen">
+                            <img href="#eligeMasaje" onclick="mostrarSelectT();" alt="Descripción de la imagen" class="menuImg" id="imagen2" src="./image/Spa/TejidoProfundoPort.jpeg" >
+                            <div onclick="mostrarSelectT();" class="tituloImage" id="titulo2">Tejido profundo</div>
+                        
+                    </div> </a>
+                   <a href="#eligeMasaje"> <div  class="contenedor-imagen">
+                        <img onclick="mostrarSelectR();" alt="Descripción de la imagen" class="menuImg" id="imagen3" src="./image/Spa/RitualPort.webp" >
+                        <div onclick="mostrarSelectR();" class="tituloImage" id="titulo3">Rituales</div>
+                        </div>
+                    </a>
+                    <a href="#eligeMasaje"><div  class="contenedor-imagen">
+                            <img onclick="mostrarSelectE();" alt="Descripción de la imagen" class="menuImg" id="imagen4" src="./image/spaRomanticPic1.jpg" >
+                            <div onclick="mostrarSelectE();" class="tituloImage" id="titulo4">Especiales</div>
+                    </div></a>
+                     <a href="#eligeMasaje"><div  class="contenedor-imagen">
+                        <img onclick="mostrarSelectH();" alt="Descripción de la imagen" class="menuImg" id="imagen5" src="./image/HigieneFacialPort.jpg" >
+                        <div onclick="mostrarSelectH();" class="tituloImage" id="titulo5">Facial</div>
+                    </div> </a>
+                      
+                </section>
+            </div>  
+        </div>
+        <div id="eligeMasaje" class="selector">
+            <div id="contenedorM">
+                <select  onchange="elegido()"  name="masaje" id="servicioM">
+                    <option value="0">Tiempo de Masaje Relajante</option>
+                    <option value="30">Masaje Relajante de 30 minutos</option>
+                    <option value="60">Masaje Relajante de 60 minutos</option>
+                    <option value="90">Masaje Relajante de 90 minutos</option>
+                </select>
+            </div>
+            <div id="contenedorT">
+                <select onchange="elegidoT()"   name="masaje" id="servicioT">
+                    <option value="0">Tiempo de Tejido profundo</option>
+                    <option value="30">Tejido profundo de 30 minutos</option>
+                    <option value="60">Tejido profundo de 60 minutos</option>
+                    <option value="90">Tejido profundo de 90 minutos</option>
+                </select>
+            </div>
+            <div id="contenedorR">
+                <select onchange="elegidoR()"   name="masaje" id="servicioR">
+                    <option value="0">Tipo de ritual</option>
+                    <option value="30">Ritual del oro</option>
+                    <option value="60">Efecto satinado</option>
+                    <option value="90">Mar de antillas</option>
+                </select>
+            </div>
+            <div id="contenedorE">
+                <select onchange="elegidoE()"   name="masaje" id="servicioE">
+                    <option value="0">Tipo de especial</option>
+                    <option value="1">Spa de amigas</option>
+                    <option value="2">spa romantico</option>
+                    <option value="3">Baño de Novia</option>
+                </select>
+            </div>
+            <div id="contenedorH">
+                <select onchange="elegidoH()"   name="masaje" id="servicioH">
+                    <option value="0">Tipo de Facial</option>
+                    <option value="1">Higiene Facial</option>
+                    <option value="2">Hidratación Facial</option>
+                </select>
+            </div>
+        </div>
+        <section class="elegidoM">
+            <div>
+                <div id="contenedorHeader">
+                    <img class="imgH" src="./image/icons/spa.png" alt="">    
+                    <h2 class="encabezado" id="header">Elige tu tipo de masaje</h2>
+                    <img class="imgH" src="./image/icons/spa.png" alt="">    
+                </div>
+                <div id="HyB">
+                    <p class="texto" id="body"></p>
+                    <p id="precio">Valor:<span id="valor"></span></p>
+                </div>
+            </div>
+            
+        </section>
+        <div class="center">
+            <button id="botonReserva"><a id="reservaAncore" href="">Realizar Reserva</a></button>
+        </div>
+        <div class="center">
+            <iframe id="reserva" src="https://docs.google.com/forms/d/e/1FAIpQLSfXraQ_4SZ7jgfzVVXGFvwbbX5OEXPD-fwDVA73ft_B_uPBAQ/viewform?embedded=true" width="640" height="1424" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+        </div>
+
+    </main>
+    <footer>
+        <h6>Escribenos ya! y pregunta por nuestras promociones</h6>
+    </footer>
+    <script src="./spa.js" ></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        function googleTranslateElementInit(){
+            new google.translate.TranslateElement(
+                {pageLanguage: 'es'},
+                'google_translate_element'
+            );
+        }
+    </script>
+</body>
+</html>
